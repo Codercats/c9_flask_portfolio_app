@@ -14,15 +14,12 @@ body {
 }
 
 .jumbotron {
-  background-image: url("static/img/hero.jpg") !important;;
+  background-image: url("static/img/hero.jpg");
   background-size: 100%;
   background-size: cover;
 }
 
-@media (max-width: 768px) {
-  .bd-placeholder-img-lg {
-    font-size: 3.5rem;
-  }
+
 
 .jumbotron {
   background-image: none;
