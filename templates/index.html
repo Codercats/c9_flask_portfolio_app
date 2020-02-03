@@ -72,7 +72,7 @@
           <div class="col-sm">
       <h1 class="display-3" style="font-size: 2.5rem;">Text mining and research</h1>
       <p>We designed Codercats to assist you with document analysis.
-        <br> You'll find it most helpful if you have large data sets and want to try out advanced analytics. Take a look at our prototype and leave comments!
+        <br> You'll find it most helpful if you have large data sets and want to try out advanced analytics. Take a look at our prototype and leave comment!
     </p>
       <p><a class="btn btn-warning btn-lg" href="{{ url_for('login') }}" role="button">Try it now &raquo;</a></p>
     </div>
@@ -191,80 +191,14 @@
 </div>
 
 
-<!-- Contact form -->
-  <h1 style="color:#ef5d45; padding-top:20px; text-align:center;">Send us your feedback</h1>
+<!-- iframe preview -->
+<h1 style="color:#ef5d45; padding-top:20px; text-align:center;">Check out the preview below</h1>
+  <p style="text-align: center;">Or <a href="http://codercats.io/login">log in</a> to view in full and leave your comments</p>
+  <iframe style="border: none; display: block; margin: auto;" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FyR6XhViCnjnVX6ZlJuhD6E%2FDashboard%3Fnode-id%3D6%253A0%26scaling%3Dscale-down" allowfullscreen></iframe>
+
+<!-- endof iframe preview -->
 
 
-<div class="container">
-  <div class="row">
-        <!--Grid column-->
-        <div class="col-sm">
-          <p style="text-align: center;">Be part of the project and leave feedback on the design...</p>
-            <form id="contact-form" name="contact-form" action="mail.php" method="POST">
-
-                <!--Grid row-->
-                <div class="row">
-
-                    <!--Grid column-->
-                    <div class="col-md-6">
-                        <div class="md-form mb-0">
-                            <label for="name" class="">Your name</label>
-                            <input type="text" id="name" name="name" class="form-control">
-                        </div>
-                    </div>
-                    <!--Grid column-->
-
-                    <!--Grid column-->
-                    <div class="col-md-6">
-                        <div class="md-form mb-0">
-                            <label for="email" class="">Your email</label>
-                            <input type="text" id="email" name="email" class="form-control">
-                        </div>
-                    </div>
-                    <!--Grid column-->
-
-                </div>
-                <!--Grid row-->
-
-                <!--Grid row-->
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="md-form mb-0">
-                          <label for="subject" class="">Subject</label>
-                            <input type="text" id="subject" name="subject" class="form-control">
-                        </div>
-                    </div>
-                </div>
-                <!--Grid row-->
-
-                <!--Grid row-->
-                <div class="row">
-
-                    <!--Grid column-->
-                    <div class="col-md-12">
-
-                        <div class="md-form">
-                            <label for="message">Your message</label>
-                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
-                        </div>
-
-                    </div>
-                </div>
-                <!--Grid row-->
-
-            </form>
-
-            <div class="text-center text-md-left" style="padding-top:10px">
-                <a class="btn btn-warning btn-lg" onclick="document.getElementById('contact-form').submit();">Send</a>
-            </div>
-            <div class="status"></div>
-        </div>
-        <!--Grid column-->
-    </div>
-</div>
-
-
-<!-- Contact form -->
 <div class="container-fluid text-center">
 <h1 style="color:#ef5d45; padding-top:20px; text-align:center;">Or send us your feedback on social media</h1>
 <p style="padding-bottom:30px;" ><a class="btn btn-info" href="https://www.linkedin.com/groups/8858493/" role="button" target="_blank">LinkedIn</a></p>
@@ -287,13 +221,6 @@
 </footer>
 <!-- footer -->
 
-<script src="js/tether.min.js"></script>
-<script src="js/scripts.js"></script>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155675234-1"></script>
     <script>
@@ -303,72 +230,6 @@
 
       gtag('config', 'UA-155675234-1');
     </script>
-
-
-<!-- for contact form https://mdbootstrap.com/docs/jquery/forms/contact/ -->
-<script>
-function validateForm() {
-var name =  document.getElementById('name').value;
-if (name == "") {
-    document.getElementById('status').innerHTML = "Name cannot be empty";
-    return false;
-}
-var email =  document.getElementById('email').value;
-if (email == "") {
-    document.getElementById('status').innerHTML = "Email cannot be empty";
-    return false;
-} else {
-    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if(!re.test(email)){
-        document.getElementById('status').innerHTML = "Email format invalid";
-        return false;
-    }
-}
-var subject =  document.getElementById('subject').value;
-if (subject == "") {
-    document.getElementById('status').innerHTML = "Subject cannot be empty";
-    return false;
-}
-var message =  document.getElementById('message').value;
-if (message == "") {
-    document.getElementById('status').innerHTML = "Message cannot be empty";
-    return false;
-}
-document.getElementById('status').innerHTML = "Sending...";
-document.getElementById('contact-form').submit();
-
-}
-</script>
-
-<script>
-document.getElementById('status').innerHTML = "Sending...";
-formData = {
-'name'     : $('input[name=name]').val(),
-'email'    : $('input[name=email]').val(),
-'subject'  : $('input[name=subject]').val(),
-'message'  : $('textarea[name=message]').val()
-};
-
-
-$.ajax({
-url : "mail.php",
-type: "POST",
-data : formData,
-success: function(data, textStatus, jqXHR)
-{
-
-$('#status').text(data.message);
-if (data.code) //If mail was sent successfully, reset the form.
-$('#contact-form').closest('form').find("input[type=text], textarea").val("");
-},
-error: function (jqXHR, textStatus, errorThrown)
-{
-$('#status').text(jqXHR);
-}
-});
-</script>
-
-<!-- for contact form -->
 
 </body>
 </html>
