@@ -553,6 +553,11 @@ pre code {
   margin-left: auto;
 }
 
+.iframe_preview {
+margin: auto;
+display: block
+}
+
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
@@ -10069,4 +10074,5 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6;
   }
 }
+
 /*# sourceMappingURL=bootstrap.css.map */
